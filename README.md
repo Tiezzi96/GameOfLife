@@ -1,5 +1,5 @@
 # GameOfLife
-Questa è una semplice implementazione del gioco [Conway's Game Of Life](https://playgameoflife.com/) realizzata utilizzando linguaggio di programmazione Python 3.8 e le librerie pygame, tkinter. 
+Questa è una semplice implementazione del gioco [Conway's Game Of Life](https://playgameoflife.com/) realizzata utilizzando linguaggio di programmazione Python 3.8 e le librerie Pygame, Tkinter. 
 
 ## Motivazioni
 Il progetto è stato realizzato per il corso di Human Computer Interaction 2020-2021, appartenente al corso di laurea magistrale in Ingegneria informatica dell'Universita degli Studi di Firenze. Game of Life è stato implementato con una GUI che consente di gestire la simulazione, sfruttando le funzionalità che verranno descritte in seguito. L'implementazione del sorgente si è concentrata sullo sviluppare correttamente le funzionalità, mantenere il codice pulito, garantire la correttezza e la completezza delle funzioni implementate. 
@@ -38,5 +38,9 @@ L'interfaccia utente presenta una griglia di dimensione variabile con ai lati i 
 - **Stop**: interrompe l'esecuzione del gioco, abilitando l'utente alla modifica dello stato
 - **Frame rate**: consente di impostare manualmente il frame rate del gioco. Di base è impostato ad 1.
 
-
+## Tecnologie e strumenti utilizzati
+Per implementare il codice si è fatto uso dei seguenti strumenti.
+- Linguaggio di programmazione: Python 3.8
+- Ambiente di sviluppo: PyCharm 2021.3 Professional Edition
+- Librerie: Pygame, Sys, Tkinter
 
