@@ -8,10 +8,10 @@ Il progetto è stato realizzato per il corso di Human Computer Interaction 2020-
 Il codice è stato elaborato seguendo una delle migliori pratiche per la programmazione di interfacce utente: Model View Controller pattern. 
 
 ## Interfaccia Grafica
-<div style="text-align:right"><img src="https://github.com/Tiezzi96/GameOfLife/blob/main/Grid.png?raw=true" width="40%" />
-<img src="https://github.com/Tiezzi96/GameOfLife/blob/main/GridHistory.png?raw=true" width="40%" />
-<img src="https://github.com/Tiezzi96/GameOfLife/blob/main/Grid2.png?raw=true" width="40%" />
-<img src="https://github.com/Tiezzi96/GameOfLife/blob/main/GridHistory2.png?raw=true" width="40%" /></div>
+<div style="text-align:right"><img src="https://github.com/Tiezzi96/GameOfLife/blob/main/Grid.png?raw=true" width="50%" />
+<img src="https://github.com/Tiezzi96/GameOfLife/blob/main/GridHistory.png?raw=true" width="50%" />
+<img src="https://github.com/Tiezzi96/GameOfLife/blob/main/Grid2.png?raw=true" width="50%" />
+<img src="https://github.com/Tiezzi96/GameOfLife/blob/main/GridHistory2.png?raw=true" width="50%" /></div>
 
 ## Funzionalità sviluppate
 
