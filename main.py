@@ -31,44 +31,6 @@ BRIGHT_RED = (238, 75, 43)
 LIGHT_BLUE = (173, 216, 230)
 
 
-class Node:
-    def __init__(self, row, col, width):
-        self.row = row
-
-        self.col = col
-
-        self.x = int(MARGIN + col * width)
-
-        self.y = int(MARGIN + row * width)
-
-        self.colour = WHITE
-
-        self.occupied = 0
-
-        self.time_of_life = 0
-
-    def draw(self, WIN):
-        # pygame.draw.rect(WIN, self.colour, (self.x, self.y, WIDTH / 8, WIDTH / 8))
-        if ROWS > COLUMNS and HEIGHT >= WIDTH:
-            pygame.draw.rect(WIN, self.colour, pygame.Rect(self.x, self.y, (WIDTH - 2 * MARGIN) / ROWS, (WIDTH - 2 * MARGIN) / ROWS))
-        elif ROWS > COLUMNS and WIDTH > HEIGHT:
-            pygame.draw.rect(WIN, self.colour, pygame.Rect(self.x, self.y, (HEIGHT - 2 * MARGIN-200) / ROWS, (HEIGHT - 2 * MARGIN-200) / ROWS))
-        elif ROWS <= COLUMNS and HEIGHT >= WIDTH:
-            pygame.draw.rect(WIN, self.colour,
-                           pygame.Rect(self.x, self.y, (WIDTH - 2 * MARGIN) / COLUMNS, (WIDTH - 2 * MARGIN) / COLUMNS))
-        elif ROWS <= COLUMNS and WIDTH > HEIGHT and WIDTH-HEIGHT >= 700:
-            pygame.draw.rect(WIN, self.colour,
-                             pygame.Rect(self.x, self.y, (HEIGHT - 2 * MARGIN - 200) / ROWS,
-                                         (HEIGHT - 2 * MARGIN - 200) / ROWS))
-        else:
-            pygame.draw.rect(WIN, self.colour, pygame.Rect(self.x, self.y, (HEIGHT - 2 * MARGIN - 200) / COLUMNS,
-                                                           (HEIGHT - 2 * MARGIN - 200) / COLUMNS))
-
-
-        if self.colour is BLACK:
-            print(self.x, self.y, (WIDTH - 2 * MARGIN) / ROWS, (WIDTH - 2 * MARGIN) / ROWS)
-
-
 def calculateDimCell(rows, columns):
     global DIM_RECT
     DIM_RECT = (HEIGHT - 2 * MARGIN-200) / rows
