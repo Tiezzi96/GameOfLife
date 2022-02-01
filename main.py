@@ -105,10 +105,10 @@ def main(WIN, WIDTH):
     blueButton = button((0, 0, 255), 685, HEIGHT - MARGIN - 100, 230, 50, 'Clear')
     FPS = 1
     calculateDimCell(ROWS, COLUMNS)
-    input_box1 = InputBox(1600, 400, 140, 32)
+    input_box1 = InputBox(1600, 500, 140, 32)
     list2 = OptionBox(
-        DIM_RECT * COLUMNS + 2 * MARGIN, 600, 160, 40, (150, 150, 150), (100, 200, 255), pygame.font.SysFont(None, 30),
-        ["initial state", "white grid"])
+        DIM_RECT * COLUMNS + 2 * MARGIN, 800, 160, 40, (150, 150, 150), (100, 200, 255), pygame.font.SysFont(None, 30),
+        ["initial state", "white grid"], "State")
     initial_state = list2.active_option
 
     model = Model(ROWS, COLUMNS, WIDTH, WIN, list2.__getattribute__('selected'))
@@ -116,7 +116,7 @@ def main(WIN, WIDTH):
     window = Window(ROWS, COLUMNS, model, DIM_RECT, WIN)
     list1 = OptionBox(
     DIM_RECT*COLUMNS+2*MARGIN, 200, 160, 40, (150, 150, 150), (100, 200, 255), pygame.font.SysFont(None, 30),
-    ["20 x 20", "30 x 30", "50 x 50", "20 x 30", "30 x 50"], 4)
+    ["20 x 20", "30 x 30", "50 x 50", "20 x 30", "30 x 50"], "Grid Size", 4)
     history_button = ToggleButton(DIM_RECT*COLUMNS+2*MARGIN, 100, 18)
     dim_grid = list1.active_option
     print("dim_grid: "+str(dim_grid))

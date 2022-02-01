@@ -79,18 +79,23 @@ class button():
 
 class OptionBox():
 
-    def __init__(self, x, y, w, h, color, highlight_color, font, option_list, selected=0):
+    def __init__(self, x, y, w, h, color, highlight_color, font, option_list, title, selected=0):
         self.color = color
         self.highlight_color = highlight_color
         self.rect = pygame.Rect(x, y, w, h)
         self.font = font
         self.option_list = option_list
+        self.title = title
         self.selected = selected
         self.draw_menu = False
         self.menu_active = False
         self.active_option = -1
 
     def draw(self, surf):
+        myfont = pygame.font.SysFont("Comic Sans MS", 35)
+        label = myfont.render(self.title, 1, BLACK)
+
+        surf.blit(label, (self.rect.x, self.rect.y - 30))
         pygame.draw.rect(surf, self.highlight_color if self.menu_active else self.color, self.rect)
         pygame.draw.rect(surf, (0, 0, 0), self.rect, 2)
         msg = self.font.render(self.option_list[self.selected], 1, (0, 0, 0))
@@ -121,7 +126,6 @@ class OptionBox():
 
         if not self.menu_active and self.active_option == -1:
             self.draw_menu = False
-
 
         for event in event_list:
             if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
