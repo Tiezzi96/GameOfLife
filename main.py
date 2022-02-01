@@ -15,7 +15,7 @@ FONT = pygame.font.Font(None, 32)
 
 print(FULLSCREEN)
 pygame.init()
-WIDTH = 1900#800
+WIDTH = 1900
 HEIGHT = 1200#915
 ROWS = 30 #20
 COLUMNS = 50
