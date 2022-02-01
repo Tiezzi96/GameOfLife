@@ -26,7 +26,7 @@ class ToggleButton:
         myfont = pygame.font.SysFont("Comic Sans MS", 35)
         # apply it to text on a label
         label = myfont.render("History Grid", 1, BLACK)
-        # put the label object on the screen at point x=100, y=100
+        # put the label object on the screen at point x=100,y=100
         WIN.blit(label, (self.x+25, self.y-2))
 
     def isOver(self, pos):

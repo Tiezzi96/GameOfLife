@@ -112,7 +112,7 @@ def main(WIN, WIDTH):
     initial_state = list2.active_option
 
     model = Model(ROWS, COLUMNS, WIDTH, WIN, list2.__getattribute__('selected'))
-    #inizializzo window
+    # inizializzo window
     window = Window(ROWS, COLUMNS, model, DIM_RECT, WIN)
     list1 = OptionBox(
     DIM_RECT*COLUMNS+2*MARGIN, 200, 160, 40, (150, 150, 150), (100, 200, 255), pygame.font.SysFont(None, 30),
