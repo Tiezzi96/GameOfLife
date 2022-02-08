@@ -6,6 +6,10 @@ COLOR_ACTIVE = pygame.Color('dodgerblue2')
 FONT = pygame.font.Font(None, 32)
 BLACK = (0, 0, 0)
 
+# InputBox -> inizializza e gestisce l'interfaccia per la  scelta del frame rate da parte dell'utente
+# COLOR_INACTIVE -> colore del riquadro per l'inserimento quando inattivo
+# COLOR_ACTIVE -> colore del riquadro per l'inserimento quando attivo
+
 
 class InputBox:
 
@@ -17,6 +21,7 @@ class InputBox:
         self.active = False
         self.text_insert = ''
 
+    # handle_event -> gestisce l'interazione dell'utente con il riquadro d'inserimento
     def handle_event(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN:
             # If the user clicked on the input_box rect.

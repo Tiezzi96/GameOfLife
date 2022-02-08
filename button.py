@@ -4,6 +4,8 @@ BLACK = (0, 0, 0)
 BRIGHT_RED = (238, 75, 43)
 LIGHT_BLUE = (173, 216, 230)
 
+# ToggleButton -> alloca il pulsante per visualizzare la cell history
+
 
 class ToggleButton:
     def __init__(self, x, y, width):
@@ -15,7 +17,7 @@ class ToggleButton:
 
         self.colour = WHITE
 
-    def draw(self, WIN):
+    def draw(self, WIN):  # disegno il bottone
         pygame.draw.rect(WIN, self.colour,
                          pygame.Rect(self.x, self.y, self.width, self.width))
         pygame.draw.line(WIN, BLACK, (self.x, self.y), (self.x, self.y+self.width), width=2)
@@ -29,9 +31,12 @@ class ToggleButton:
         # put the label object on the screen at point x=100,y=100
         WIN.blit(label, (self.x+25, self.y-2))
 
+    # isOver -> controlla se il click è stato eseguito sul pulsante
+    # in base alle coordinate del cursore
+
     def isOver(self, pos):
-        if pos[0] > self.x and pos[0] < self.x + self.width:
-            if pos[1] > self.y and pos[1] < self.y + self.width:
+        if self.x < pos[0] < self.x + self.width:
+            if self.y < pos[1] < self.y + self.width:
                 print("isOver")
                 if self.colour == WHITE:
                     self.colour = BRIGHT_RED
@@ -48,8 +53,10 @@ class ToggleButton:
         self.y = y
 
 
-class button():
+# la classe button inizializza i comandi Play/Clear/Stop
 
+
+class button:
     def __init__(self, color, x,   y, width, height, text=''):
         self.x = x
         self.y = y
@@ -68,16 +75,22 @@ class button():
             text = font.render(self.text, 1, (0, 0, 0))
             win.blit(text, (self.x +(self.width/2-text.get_width()/2), self.y +(self.height/2 - text.get_height()/2)))
 
+    # isOver -> controlla se il click è stato eseguito sul pulsante
+    # in base alle coordinate del cursore
+
     def isOver(self, pos):
-        if pos[0] > self.x and pos[0] < self.x + self.width:
-            if pos[1] > self.y and pos[1] < self.y + self.height:
+        if self.x < pos[0] < self.x + self.width:
+            if self.y < pos[1] < self.y + self.height:
                 print(self.text)
                 return True
 
         return False
 
+# class OptionBox: inizializza i pulsanti per la selezione della dimensione della griglia e
+# lo stato iniziale
 
-class OptionBox():
+
+class OptionBox:
 
     def __init__(self, x, y, w, h, color, highlight_color, font, option_list, title, selected=0):
         self.color = color
@@ -137,9 +150,12 @@ class OptionBox():
                     return self.active_option
         return -1
 
+    # isOver -> controlla se il click è stato eseguito sul pulsante
+    # in base alle coordinate del cursore
+
     def isOver(self, pos):
-        if pos[0] > self.rect.x and pos[0] < self.rect.x + self.rect.y:
-            if pos[1] > self.rect.y and pos[1] < self.rect.y + self.rect.h:
+        if self.rect.x < pos[0] < self.rect.x + self.rect.y:
+            if self.rect.y < pos[1] < self.rect.y + self.rect.h:
                 print("CIAO")
                 return True
 
